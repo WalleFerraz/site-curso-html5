@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+    background-color: white;
+    color: rgba(0,0,0,1);
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+/* Formatação de imagens com legendas*/
+figure.foto-legenda {
+    position: relative; /* Determina uma posição para os seus objetos-filho terem como referência.*/
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute; /*É a parte mais superior esquerda em relação a posição determinada na figure.foto-legenda.*/
+    top: 0px; /*Determina de onde ele vai começar dentro da posição relativa determinada na figure.foto-legenda, que é a mãe desse grupo.*/ 
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+}
