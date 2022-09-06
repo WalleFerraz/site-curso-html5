@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JavaScript</title>
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <script>
+        var broken = false;
+        function changeLamp(value) {   
+            if(value == 1) 
+                source = "_imagens/lampada-acesa.jpg";
+            
+            else if(value == 2) 
+                source = "_imagens/lampada-apagada.jpg";
+            
+            else
+                source = "_imagens/lampada-quebrada.jpg";
+            
+            if(!broken) {
+                document.getElementById("luz").src = source;
+                if(value == 3) {
+                    broken = true;
+                }
+            }
+        }
+    </script>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="changeLamp(1)" onmouseout="changeLamp(2)" onclick="changeLamp(3)"/>
+</body>
+</html
